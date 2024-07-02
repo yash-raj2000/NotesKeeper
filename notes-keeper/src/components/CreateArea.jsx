@@ -13,7 +13,7 @@ function CreateArea() {
 
   const getNotes = async () => {
     try {
-      const response = await fetch("http://localhost:5000/getNotes");
+      const response = await fetch("https://noteskeeper-s2ul.onrender.com/getNotes");
       const jsonData = await response.json();
       setNotes(jsonData);
     } catch (err) {
@@ -33,7 +33,7 @@ function CreateArea() {
     e.preventDefault();
     try {
       const body = { title: note.title, content: note.content };
-      const response = await fetch("http://localhost:5000/addNotes", {
+      const response = await fetch("https://noteskeeper-s2ul.onrender.com/addNotes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ function CreateArea() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/delNotes/${id}`, {
+      const response = await fetch(`https://noteskeeper-s2ul.onrender.com/delNotes/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
