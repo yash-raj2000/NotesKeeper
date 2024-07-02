@@ -34,7 +34,7 @@ function EditNotes({ id, noted, update }) {
         title: editedNote.title,
         content: editedNote.content,
       };
-      const response = await fetch(`http://localhost:5000/update/${id}`, {
+      const response = await fetch(`https://noteskeeper-s2ul.onrender.com/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
