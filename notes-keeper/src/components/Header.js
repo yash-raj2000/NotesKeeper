@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <h2 className="headerH2">
-        <EventNoteSharpIcon /> Notes Keeper
+        <EventNoteSharpIcon fontSize="20px" style={{marginTop:"3px"}} /> NoteSphere : Your thoughts, organized and at your fingertips.
       </h2>
     </header>
   );
